@@ -16,6 +16,7 @@ figure, imshow(Openbw), title('Open');
 %% Fill hole
 Fillbw = imfill(Openbw, 'holes');
 figure, imshow(Fillbw), title('Fill');
+
 %% Hyperparameters
 upperbound = 30000;
 lowerbound = 1000;
@@ -58,6 +59,7 @@ for i = 1:size(stats)
         sum = sum + 1;
     end
 end
+title(['Total Counts: ', num2str(sum)]);
 hold off
 
-fprintf('Total Counts: %d\n', sum);
+%fprintf('Total Counts: %d\n', sum);
